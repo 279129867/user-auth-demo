@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: user-auth-demo
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/user_auth_demo?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 3s
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# JWT 配置
+app:
+  jwt:
+    # 生产环境务必通过环境变量注入，不要写死在代码里
+    secret: ${JWT_SECRET:demo-secret-key-change-me-in-production-0123456789}
+    # 过期时间（毫秒），默认 24 小时
+    expire-ms: ${JWT_EXPIRE_MS:86400000}

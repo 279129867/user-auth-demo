@@ -1,0 +1,16 @@
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\dto\LoginRequest.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\common\ApiResponse.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\common\BizException.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\common\GlobalExceptionHandler.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\service\AuthService.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\util\JwtUtil.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\config\JwtAuthFilter.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\config\SecurityConfig.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\repository\UserRepository.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\dto\RegisterRequest.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\controller\AuthController.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\entity\User.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\UserAuthApplication.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\config\RedisConfig.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\service\UserService.java
+C:\Users\Administrator\Doubao\chats\2026-10-13\new-chat\user-auth-demo\src\main\java\com\demo\user\controller\UserController.java

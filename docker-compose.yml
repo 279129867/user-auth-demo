@@ -1,0 +1,55 @@
+# 一键起全套：MySQL + Redis + 应用
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: demo-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_auth_demo
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo123
+    ports:
+      # 宿主机 3306 被本地 MySQL80 服务占用，宿主侧映射到 3307；
+      # 容器间仍走内网 mysql:3306，不影响应用连接
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: demo-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: demo-app
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: demo
+      MYSQL_PASSWORD: demo123
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      # 生产环境务必覆盖此密钥
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production-0123456789abcdef}
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

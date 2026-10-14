@@ -1,0 +1,16 @@
+com\demo\user\controller\AuthController.class
+com\demo\user\entity\User.class
+com\demo\user\dto\RegisterRequest.class
+com\demo\user\common\ApiResponse.class
+com\demo\user\common\GlobalExceptionHandler.class
+com\demo\user\config\SecurityConfig.class
+com\demo\user\dto\LoginRequest.class
+com\demo\user\service\AuthService.class
+com\demo\user\repository\UserRepository.class
+com\demo\user\UserAuthApplication.class
+com\demo\user\util\JwtUtil.class
+com\demo\user\config\RedisConfig.class
+com\demo\user\common\BizException.class
+com\demo\user\service\UserService.class
+com\demo\user\config\JwtAuthFilter.class
+com\demo\user\controller\UserController.class
